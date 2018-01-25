@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Lotery</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="check-validity" novalidate id="form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="First name" required>
+                    <div class="invalid-feedback">
+                        Please write your name.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" id="surname" placeholder="Surname" required>
+                    <div class="invalid-feedback">
+                        Please write your surname.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mail">Email address</label>
+                    <input type="email" class="form-control" id="mail"
+                           placeholder="Enter email" name="mail" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" name="phone" id="phone" pattern="(\+?\d[- .]*){7,13}" placeholder="+XX XXXX XXXX">
+                    <div class="invalid-feedback">
+                        Please write valid phone number.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <table  class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">name</th>
+                    <th scope="col">surname</th>
+                    <th scope="col">mail</th>
+                    <th scope="col">data</th>
+                    <th scope="col">phone</th>
+                </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
